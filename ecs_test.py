@@ -1,9 +1,9 @@
-import ecs_engine
+import ecs_core
 
-entity_manager = ecs_engine.EntityManager()
-system_manager = ecs_engine.SystemManager()
-entity_manager.entity_add()
-entity_manager.entity_add()
+entity_manager = ecs_core.EntityManager()
+system_manager = ecs_core.SystemManager()
+entity_manager.entity_create()
+entity_manager.entity_create()
 
 ent0 = entity_manager.entity_pool[0]
 ent1 = entity_manager.entity_pool[1]
@@ -15,7 +15,7 @@ for ent_id, ent in enumerate(entity_manager.entity_pool):
 print('active systems', system_manager.active_systems)
 
 ent0_position = ent0.get_component('Position')
-ent0_position.y += 100
+
 print(ent0_position)
 system_manager.update()
 print(ent0_position)

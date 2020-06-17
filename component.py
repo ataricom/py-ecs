@@ -16,4 +16,4 @@ class Position(Component):
         self.z = z
 
     def __str__(self):
-        return f'x= {self.x}\ny= {self.y}\nz= {self.z}\n'
+        return f'Position\tx= {self.x}\n\t\t\ty= {self.y}\n\t\t\tz= {self.z}\n'
